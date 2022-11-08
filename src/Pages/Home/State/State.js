@@ -13,13 +13,13 @@ const State = () => {
         <div className="stat place-items-center">
           <div className="stat-title">Happy Client</div>
           <div className="stat-value">17,320</div>
-          <div className="stat-desc">From 1995 to February 2022</div>
+          <div className="stat-desc">From January 1995 to February 2022</div>
         </div>
 
         <div className="stat place-items-center">
           <div className="stat-title">Projects</div>
           <div className="stat-value text-warning">3,250</div>
-          <div className="stat-desc text-warning">↗︎ 40 (2%)</div>
+          <div className="stat-desc text-warning">↗︎ 40 (12%)</div>
         </div>
 
         <div className="stat place-items-center">
@@ -30,7 +30,7 @@ const State = () => {
 
         <div className="stat place-items-center">
           <div className="stat-title">Positive Feedback</div>
-          <div className="stat-value text-warning">97%</div>
+          <div className="stat-value text-warning">97.4%</div>
           <div className="stat-desc text-warning">↗︎ 40 (2%)</div>
         </div>
 
