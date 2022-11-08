@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Singleservice from './Service/Singleservice';
 
 const Services = () => {
@@ -19,6 +20,9 @@ const Services = () => {
         {
           services.map(service => <Singleservice key={service.service_id} service={service}></Singleservice>)
         }
+      </div>
+      <div className='flex justify-center my-3'>
+        <Link to='services'><button className="btn btn-wide btn-secondary">See all</button></Link>
       </div>
     </div>
   );
