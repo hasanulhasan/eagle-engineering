@@ -3,6 +3,7 @@
     "service_id": "05",
     "title": "Battery Charge",
     "img": "https://i.ibb.co/ydCbDN3/5555.jpg",
+    "rating": "5",
     "price": "20.00",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam n…"
   },
@@ -10,6 +11,7 @@
     "service_id": "05",
     "title": "Battery Charge",
     "img": "https://i.ibb.co/ydCbDN3/5555.jpg",
+    "rating": "4",
     "price": "20.00",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam n…"
   },
@@ -17,6 +19,7 @@
     "service_id": "05",
     "title": "Battery Charge",
     "img": "https://i.ibb.co/ydCbDN3/5555.jpg",
+    "rating": "5",
     "price": "20.00",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam n…"
   },
@@ -24,6 +27,7 @@
     "service_id": "05",
     "title": "Battery Charge",
     "img": "https://i.ibb.co/ydCbDN3/5555.jpg",
+    "rating": "3",
     "price": "20.00",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam n…"
   },
@@ -31,6 +35,15 @@
     "service_id": "05",
     "title": "Battery Charge",
     "img": "https://i.ibb.co/ydCbDN3/5555.jpg",
+    "rating": "3",
+    "price": "20.00",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam n…"
+  },
+  {
+    "service_id": "06",
+    "title": "Battery Charge",
+    "img": "https://i.ibb.co/ydCbDN3/5555.jpg",
+    "rating": "4",
     "price": "20.00",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam n…"
   }
