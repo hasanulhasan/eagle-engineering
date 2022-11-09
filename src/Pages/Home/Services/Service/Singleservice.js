@@ -19,7 +19,7 @@ const Singleservice = ({ service }) => {
           <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
         </div>
         <div className="card-actions justify-end">
-          <button className="btn btn-warning btn-outline"><Link to={`services/${_id}`}>Details</Link></button>
+          <Link to={`services/${_id}`}><button className="btn btn-warning btn-outline">Details</button></Link>
         </div>
       </div>
     </div>
