@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import useTitle from '../../Hooks/useTitle';
 
 const Item = ({ title, children }) => {
+  useTitle('Blogs')
   const [isOpen, setIsOpen] = useState(false);
 
   return (

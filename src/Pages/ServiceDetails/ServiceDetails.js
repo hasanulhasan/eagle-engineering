@@ -1,8 +1,28 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../Hooks/useTitle';
 
 const ServiceDetails = () => {
+  useTitle('Details')
   const { title, price, rating, description, img, _id } = useLoaderData();
+
+  const handleReview = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const review = form.review.value;
+
+    const reviewInfo = {
+      service: title,
+      price: price,
+      rating: rating,
+      email,
+      review
+
+    }
+  }
+
+
   return (
     <div>
       <div className="flex flex-col w-full h-full lg:flex-row">
@@ -56,17 +76,22 @@ const ServiceDetails = () => {
           </div>
           {/* user review end*/}
           {/* user input review */}
-          <div className="form-control mt-2 pb-5 w-4/5">
+          <form className="form-control mt-2 pb-5 w-4/5" onSubmit={handleReview}>
             <h1 className="text-2xl text-info pb-4">Put a Review</h1>
-            <label className="input-group input-group-vertical">
+            <input type="email" placeholder="Email" name='email' className="input input-bordered input-info w-full" />
+            <input type="text" placeholder="Your review" name='review' className="input input-bordered input-info w-full mt-2" />
+            {/* <label className="input-group input-group-vertical">
               <span>Your Email</span>
-              <input type="text" placeholder="info@site.com" className="input input-bordered" />
+              <input type="text" name='email' placeholder="info@site.com" className="input input-bordered" />
             </label>
             <label className="input-group input-group-vertical mt-2">
               <span>Your Review</span>
-              <input type="text" placeholder="abc.." className="input input-bordered" />
-            </label>
-          </div>
+              <input type="text" name='review' placeholder="abc.." className="input input-bordered" />
+            </label> */}
+            <div className='mt-4 flex justify-center'>
+              <button className="btn btn-wide btn-success btn-outline">Submit</button>
+            </div>
+          </form>
           {/* user input review finish*/}
 
         </div>
