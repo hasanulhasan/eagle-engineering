@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Singleservice from './Service/Singleservice';
 
-const Services = () => {
+const HomeServices = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
     fetch('services.json')
@@ -28,4 +28,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default HomeServices;

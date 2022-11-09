@@ -1,50 +1,50 @@
 [
   {
-    "service_id": "05",
-    "title": "Battery Charge",
-    "img": "https://i.ibb.co/ydCbDN3/5555.jpg",
+    "service_id": "01",
+    "title": "Civil engineering problem solution",
+    "img": "https://www.secretentourage.com/wp-content/uploads/2016/05/problemsolution.jpg",
     "rating": "5",
-    "price": "20.00",
+    "price": "200",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam n…"
   },
   {
-    "service_id": "05",
-    "title": "Battery Charge",
-    "img": "https://i.ibb.co/ydCbDN3/5555.jpg",
+    "service_id": "02",
+    "title": "Calculation of design and structures",
+    "img": "https://sohtmon.farovon.tj/wp-content/uploads/2021/03/03c611a30847515548ecf941777b666e.jpg",
     "rating": "4",
-    "price": "20.00",
+    "price": "190",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam n…"
   },
   {
-    "service_id": "05",
-    "title": "Battery Charge",
-    "img": "https://i.ibb.co/ydCbDN3/5555.jpg",
+    "service_id": "03",
+    "title": "Mentoring civil engineering subjects",
+    "img": "https://cdn.dribbble.com/users/6804422/screenshots/15040597/23_dribbble_animasi_logo_mentoring_leader_4x.png",
     "rating": "5",
-    "price": "20.00",
+    "price": "250",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam n…"
+  },
+  {
+    "service_id": "04",
+    "title": "Soil Testing of your Project",
+    "img": "https://www.farmmanagement.pro/wp-content/uploads/2018/06/Soil-test-for-beans-Rwanda.-Credit_AGRA-605x330.jpg",
+    "rating": "3",
+    "price": "150",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam n…"
   },
   {
     "service_id": "05",
-    "title": "Battery Charge",
-    "img": "https://i.ibb.co/ydCbDN3/5555.jpg",
+    "title": "Interior and Exterior Design",
+    "img": "https://5.imimg.com/data5/SELLER/Default/2021/12/SC/CP/FH/9306717/house-architectural-designing-service-1000x1000.jpg",
     "rating": "3",
-    "price": "20.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam n…"
-  },
-  {
-    "service_id": "05",
-    "title": "Battery Charge",
-    "img": "https://i.ibb.co/ydCbDN3/5555.jpg",
-    "rating": "3",
-    "price": "20.00",
+    "price": "500",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam n…"
   },
   {
     "service_id": "06",
-    "title": "Battery Charge",
-    "img": "https://i.ibb.co/ydCbDN3/5555.jpg",
+    "title": "Custom Furniture Design",
+    "img": "https://sentientfurniture.com/wp-content/uploads/2019/12/edition_london_sentient_project_custom_made_desk.jpg",
     "rating": "4",
-    "price": "20.00",
+    "price": "220",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam n…"
   }
 ]
