@@ -3,6 +3,7 @@ import PrivateRouter from "../Contex/PrivateRouter/PrivateRouter";
 import Blogs from "../Pages/Blogs/Blogs";
 import Home from "../Pages/Home/Home";
 import Main from "../Pages/LayOut/Main";
+import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
 import Services from "../Pages/Services/Services";
 import Login from "../UserOptions/Login";
 import Signup from "../UserOptions/Signup";
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login></Login>
+      },
+      {
+        path: '/services/:id',
+        element: <ServiceDetails></ServiceDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5001/services/${params.id}`)
       },
       {
         path: '/signup',
