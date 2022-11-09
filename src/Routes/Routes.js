@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import PrivateRouter from "../Contex/PrivateRouter/PrivateRouter";
 import Blogs from "../Pages/Blogs/Blogs";
 import Home from "../Pages/Home/Home";
 import Main from "../Pages/LayOut/Main";
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/blogs',
-        element: <Blogs></Blogs>
+        element: <PrivateRouter><Blogs></Blogs></PrivateRouter>
       },
       {
         path: '/login',

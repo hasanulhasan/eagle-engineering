@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Contex/AuthProvider/AuthProvider';
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    console.log('logout clicked');
+    logOut()
+      .then(() => { })
+      .catch(err => console.error(err))
+  }
+
   return (
     <div className="navbar bg-base-100">
       <div className="flex-1">
@@ -9,12 +19,34 @@ const Navbar = () => {
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal p-0">
+          {/* <li>{user?.displayName}</li> */}
+          {
+            user?.uid ?
+              <>
+                <li><Link to='/'>My Review</Link></li>
+                <li><Link to='/'>Add Service</Link></li>
+              </> :
+              <></>
+          }
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/blogs'>Blogs</Link></li>
           <li><Link to='/services'>Services</Link></li>
-          <li><Link to='/login'>Login</Link></li>
-          <li><Link to='/signup'>Sign up</Link></li>
-          <li><Link to='/login'><button className="btn btn-outline btn-warning">Login</button></Link></li>
+          {/* <li><Link to='/signup'>Sign up</Link></li> */}
+          {/* <li><button onClick={handleLogout} className="btn btn-outline btn-warning">LogOut</button></li> */}
+          {/* <li><Link to='/login'><button className="btn btn-outline btn-warning">Login</button></Link></li> */}
+
+          {
+            user?.uid ?
+              <>
+                <li><button onClick={handleLogout} className="btn btn-outline btn-warning">LogOut</button></li>
+              </>
+              :
+              <>
+                <li><Link to='/login'><button className="btn btn-outline btn-warning">Login</button></Link></li>
+                {/* <li><Link to='/signup'><button className="btn btn-outline btn-warning">SignUp</button></Link></li> */}
+              </>
+          }
+
         </ul>
       </div>
     </div>
