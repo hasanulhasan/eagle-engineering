@@ -9,11 +9,11 @@ const ServiceDetails = () => {
         <div className="grid flex-grow h-full w-3/5 card bg-base-300 rounded-box place-items-center">
 
           <div className="card card-compact w-full h-full bg-base-100 shadow-xl">
-            <h2 className="text-5xl my-5 p-10">{title}</h2>
-            <figure><img src={img} alt=".." className='h-96 rounded-lg' /></figure>
-            <div className="p-10 my-5">
+            <h2 className="text-5xl my-5 p-4">{title}</h2>
+            <figure><img src={img} alt=".." className='h-80 rounded-lg' /></figure>
+            <div className="p-2 my-5">
               <p className="text-2xl text-warning">Price ${price}</p>
-              <p className="text-2xl text-info pb-5">Rating: {rating}</p><hr />
+              <p className="text-2xl text-info pb-4">Rating: {rating}</p><hr />
               <div className="rating pt-2">
                 <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                 <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
@@ -26,8 +26,28 @@ const ServiceDetails = () => {
           </div>
 
         </div>
-        <div className="divider lg:divider-horizontal">>></div>
-        <div className="grid flex-grow h-full card bg-base-300 rounded-box place-items-center">content</div>
+        <div className="divider lg:divider-horizontal font-extrabold">>></div>
+
+        <div className="grid flex-grow h-full w-2/5 card bg-base-300 rounded-box place-items-center">
+
+          <div className="card card-compact w-full bg-base-100 shadow-xl">
+            <figure><img src={img} alt=".." className='h-72' /></figure>
+            <div className="card-body">
+              <h2 className="card-title">{title}</h2>
+              <p>${price}</p>
+              <p>Rating: {rating}</p>
+              <p>{`${description.slice(0, 100)}...`}</p>
+              <div className="rating">
+                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div >
   );
