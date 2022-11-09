@@ -1,27 +1,27 @@
 [
   {
     "service_id": "01",
-    "title": "Civil engineering problem solution",
+    "title": "Civil Engineering Problem Solution",
     "img": "https://www.secretentourage.com/wp-content/uploads/2016/05/problemsolution.jpg",
     "rating": "5",
     "price": "200",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam n…"
+    "description": "Engineering, at its origins, was a profession of problem solving. The classic text, Dialogues Concerning Two New Sciences by Galileo Galilei is revisited in this ambitious and comprehensive book by Milton Shaw. In-depth discussions of passages from the Galileo text emphasize the 'mind set' of engineering, specifically the roles played by experimentation and dialog in analysis and creativity."
   },
   {
     "service_id": "02",
-    "title": "Calculation of design and structures",
+    "title": "Calculation of Design and Structures",
     "img": "https://sohtmon.farovon.tj/wp-content/uploads/2021/03/03c611a30847515548ecf941777b666e.jpg",
     "rating": "4",
     "price": "190",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam n…"
+    "description": "Structural engineers make your building stand. They design structures to defy gravity, withstand heavy winds, and continue standing even as the ground beneath them starts to shake. Engineers support their design with structural calculations - a complex, little-known tool that lacks the glory of architectural design. If you are planning a construction project, you’ve likely heard of them. You may have wondered what they were, or whether they applied to your project."
   },
   {
     "service_id": "03",
-    "title": "Mentoring civil engineering subjects",
+    "title": "Mentoring Civil Engineering Subjects",
     "img": "https://cdn.dribbble.com/users/6804422/screenshots/15040597/23_dribbble_animasi_logo_mentoring_leader_4x.png",
     "rating": "5",
     "price": "250",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam n…"
+    "description": "Mentoring programs help people make connections, share experiences, and navigate uncharted territory with someone who has already taken the journey. Being an engineering major comes with its own unique set of challenges on top of the need to build relationships, trust peers and work in teams within this community of scholars. Feelings of isolation, estrangement, doubt, uncertainty and fear are not uncommon for college students. Mentors can offer students, whether they’re struggling or not, an open opportunity to ask questions and seek guidance during unfamiliar times or when they need help reconnecting with a community of peers."
   },
   {
     "service_id": "04",
@@ -29,7 +29,7 @@
     "img": "https://www.farmmanagement.pro/wp-content/uploads/2018/06/Soil-test-for-beans-Rwanda.-Credit_AGRA-605x330.jpg",
     "rating": "3",
     "price": "150",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam n…"
+    "description": "With soil test data, the problem of identification is twofold. Not only does the field from which the sample was taken need to be identified, but the particular test and units used by the laboratory where the sample was processed must also be known. With a sample's field identification, the field ID must travel with the sample's data so it appears alongside the test results in the report or data file returned by the laboratory."
   },
   {
     "service_id": "05",
@@ -37,7 +37,7 @@
     "img": "https://5.imimg.com/data5/SELLER/Default/2021/12/SC/CP/FH/9306717/house-architectural-designing-service-1000x1000.jpg",
     "rating": "3",
     "price": "500",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam n…"
+    "description": "Interior designers are sometimes called upon by clients to help with not only their indoor areas but also outdoor environments of a home or building. They can take features of a space's interior into an outdoor setting, such as a patio, to create a unified look and feel.Similarly, a designer can be inspired to tie in outdoor elements, such as a garden, with indoor spaces."
   },
   {
     "service_id": "06",
@@ -45,6 +45,6 @@
     "img": "https://sentientfurniture.com/wp-content/uploads/2019/12/edition_london_sentient_project_custom_made_desk.jpg",
     "rating": "4",
     "price": "220",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam n…"
+    "description": "Thinking of making new furniture of your choice? We understand your choice, Custom make your furniture with affordable price. Choose your favorite furniture from selected/customized design with free delivery and assemble. Take support from industry experts offering from sheba.xyz near you and get the hassle free furniture making experience with reliable products and affordable pricing with guaranteed satisfaction and quality."
   }
 ]
