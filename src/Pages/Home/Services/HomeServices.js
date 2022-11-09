@@ -4,11 +4,13 @@ import Singleservice from './Service/Singleservice';
 
 const HomeServices = () => {
   const [services, setServices] = useState([]);
+
   useEffect(() => {
     fetch('http://localhost:5001/services')
       .then(res => res.json())
       .then(data => setServices(data))
   }, [])
+
   return (
     <div>
       <div className='text-center'>
