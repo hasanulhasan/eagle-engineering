@@ -1,3 +1,17 @@
+# Project Information
+## projects features
+1-It can use an civil engineering company for their business
+2-It can be make for any services 
+
+## functionality  
+### `connect with server and database`
+### `show service info`
+### `user can interact`
+### `valuable data can be saved`
+### `overall a full stack SPA`
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
