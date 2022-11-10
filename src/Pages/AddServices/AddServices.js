@@ -45,7 +45,8 @@ const AddServices = () => {
   return (
     <div className='flex justify-center'>
       <div className='w-1/2'>
-        <form className="card-body" onSubmit={handleSubmit}>
+        <form className="card-body outline-double outline-3 outline-offset-2 rounded-lg my-4 " onSubmit={handleSubmit}>
+          <h1 className='text-center text-3xl py-2 font-semibold'>Add Services</h1>
           <div className="form-control">
             <label className="label">
               <span className="label-text text-xl">Service Title</span>

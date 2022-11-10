@@ -1,13 +1,13 @@
 import { GoogleAuthProvider } from 'firebase/auth';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import AuthProvider, { AuthContext } from '../Contex/AuthProvider/AuthProvider';
 import useTitle from '../Hooks/useTitle';
 
 const Login = () => {
   useTitle('Login')
-
-  const { user, providerLogin } = useContext(AuthContext);
+  const [error, setError] = useState('');
+  const { user, providerLogin, signIn } = useContext(AuthContext);
   const googleProvider = new GoogleAuthProvider();
 
   const navigate = useNavigate();
@@ -24,6 +24,25 @@ const Login = () => {
       })
       .catch(err => {
         console.error(err);
+      })
+  }
+
+  const handleLogInSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+    signIn(email, password)
+      .then(result => {
+        const user = result.user;
+        setError('');
+        form.reset();
+        navigate(from, { replace: true });
+      })
+      .catch(e => {
+        console.error(e);
+        setError(e.message);
       })
   }
 
@@ -59,7 +78,7 @@ const Login = () => {
           <p className="px-3 dark:text-gray-400">OR</p>
           <hr className="w-full dark:text-gray-400" />
         </div>
-        <form novalidate="" action="" className="space-y-8 ng-untouched ng-pristine ng-valid">
+        <form onSubmit={handleLogInSubmit} className="space-y-8 ng-untouched ng-pristine ng-valid">
           <div className="space-y-4">
             <div className="space-y-2">
               <label for="email" className="block text-sm">Email address</label>
@@ -68,12 +87,16 @@ const Login = () => {
             <div className="space-y-2">
               <div className="flex justify-between">
                 <label for="password" className="text-sm">Password</label>
-                <a rel="noopener noreferrer" href="#" className="text-xs hover:underline dark:text-gray-400">Forgot password?</a>
               </div>
               <input type="password" name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" />
+              <div className='flex justify-end'>
+                <p>Forgot password?</p>
+                <p>{error}</p>
+              </div>
             </div>
+
           </div>
-          <button type="button" className="w-full px-8 py-3 font-semibold rounded-md dark:bg-violet-400 dark:text-gray-900">Sign in</button>
+          <button type="submit" className="w-full px-8 py-3 font-semibold rounded-md dark:bg-violet-400 dark:text-gray-900">Sign in</button>
         </form>
       </div>
     </div>

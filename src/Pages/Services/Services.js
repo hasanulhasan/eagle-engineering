@@ -14,6 +14,7 @@ const Services = () => {
 
   return (
     <div>
+      <h1 className='text-center text-4xl py-2 my-2 font-semibold'>Here you can see all Services</h1>
       <div className='my-4 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
         {
           services.map(service => <ServiceCard key={service._id} service={service}></ServiceCard>)

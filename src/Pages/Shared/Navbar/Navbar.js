@@ -19,10 +19,18 @@ const Navbar = () => {
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal p-0">
-          <li>{user?.displayName}</li>
-          <li>{user?.email}</li>
+          {/* <li> <Link to='/'>{user?.displayName}</Link></li>
+          <li> <Link to='/'>{user?.email}</Link></li>
+          <li><Link to='/'><div className="avatar">
+            <div className="w-10 rounded-full">
+              <img src={user?.photoURL} alt='..' />
+            </div>
+          </div></Link></li> */}
+
+
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/blogs'>Blogs</Link></li>
+          <li><Link to='/services'>Services</Link></li>
           {
             user?.uid ?
               <>
@@ -31,10 +39,6 @@ const Navbar = () => {
               </> :
               <></>
           }
-          <li><Link to='/services'>Services</Link></li>
-          {/* <li><Link to='/signup'>Sign up</Link></li> */}
-          {/* <li><button onClick={handleLogout} className="btn btn-outline btn-warning">LogOut</button></li> */}
-          {/* <li><Link to='/login'><button className="btn btn-outline btn-warning">Login</button></Link></li> */}
 
           {
             user?.uid ?
@@ -44,7 +48,6 @@ const Navbar = () => {
               :
               <>
                 <li><Link to='/login'><button className="btn btn-outline btn-warning">Login</button></Link></li>
-                {/* <li><Link to='/signup'><button className="btn btn-outline btn-warning">SignUp</button></Link></li> */}
               </>
           }
 
