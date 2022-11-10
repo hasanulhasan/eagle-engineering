@@ -3,6 +3,7 @@ import PrivateRouter from "../Contex/PrivateRouter/PrivateRouter";
 import Blogs from "../Pages/Blogs/Blogs";
 import Home from "../Pages/Home/Home";
 import Main from "../Pages/LayOut/Main";
+import Myreview from "../Pages/Myreview/Myreview";
 import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
 import Services from "../Pages/Services/Services";
 import Login from "../UserOptions/Login";
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login></Login>
+      },
+      {
+        path: '/myreview',
+        element: <Myreview></Myreview>
       },
       {
         path: '/services/:id',

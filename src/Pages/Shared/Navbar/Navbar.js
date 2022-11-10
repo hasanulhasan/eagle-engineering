@@ -23,12 +23,13 @@ const Navbar = () => {
           {
             user?.uid ?
               <>
-                <li><Link to='/'>My Review</Link></li>
+                <li><Link to='/myreview'>My Review</Link></li>
                 <li><Link to='/'>Add Service</Link></li>
               </> :
               <></>
           }
           <li><Link to='/'>Home</Link></li>
+          <li><Link to='/myreview'>My Review</Link></li>
           <li><Link to='/blogs'>Blogs</Link></li>
           <li><Link to='/services'>Services</Link></li>
           {/* <li><Link to='/signup'>Sign up</Link></li> */}

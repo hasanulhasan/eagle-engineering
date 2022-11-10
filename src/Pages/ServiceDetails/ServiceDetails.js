@@ -9,17 +9,36 @@ const ServiceDetails = () => {
   const handleReview = (e) => {
     e.preventDefault();
     const form = e.target;
+    const name = form.name.value;
     const email = form.email.value;
     const review = form.review.value;
 
     const reviewInfo = {
-      service: title,
+      serviceId: _id,
+      service_name: title,
       price: price,
       rating: rating,
+      name,
       email,
       review
-
     }
+
+    fetch('http://localhost:5001/reviews', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(reviewInfo)
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data)
+        if (data.acknowledged) {
+          form.reset();
+          alert('your review added')
+        }
+      })
+      .catch(err => console.error(err))
   }
 
 
@@ -78,8 +97,9 @@ const ServiceDetails = () => {
           {/* user input review */}
           <form className="form-control mt-2 pb-5 w-4/5" onSubmit={handleReview}>
             <h1 className="text-2xl text-info pb-4">Put a Review</h1>
-            <input type="email" placeholder="Email" name='email' className="input input-bordered input-info w-full" />
-            <input type="text" placeholder="Your review" name='review' className="input input-bordered input-info w-full mt-2" />
+            <input type="text" placeholder="Name" name='name' className="input input-bordered input-info w-full" required />
+            <input type="email" placeholder="Email" name='email' className="input input-bordered input-info w-full mt-2" required />
+            <input type="text" placeholder="Your review" name='review' className="input input-bordered input-info w-full mt-2" required />
             {/* <label className="input-group input-group-vertical">
               <span>Your Email</span>
               <input type="text" name='email' placeholder="info@site.com" className="input input-bordered" />
