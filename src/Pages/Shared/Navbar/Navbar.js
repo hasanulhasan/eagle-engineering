@@ -19,18 +19,18 @@ const Navbar = () => {
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal p-0">
-          {/* <li>{user?.displayName}</li> */}
+          <li>{user?.displayName}</li>
+          <li>{user?.email}</li>
+          <li><Link to='/'>Home</Link></li>
+          <li><Link to='/blogs'>Blogs</Link></li>
           {
             user?.uid ?
               <>
                 <li><Link to='/myreview'>My Review</Link></li>
-                <li><Link to='/'>Add Service</Link></li>
+                <li><Link to='/addservices'>Add Service</Link></li>
               </> :
               <></>
           }
-          <li><Link to='/'>Home</Link></li>
-          <li><Link to='/myreview'>My Review</Link></li>
-          <li><Link to='/blogs'>Blogs</Link></li>
           <li><Link to='/services'>Services</Link></li>
           {/* <li><Link to='/signup'>Sign up</Link></li> */}
           {/* <li><button onClick={handleLogout} className="btn btn-outline btn-warning">LogOut</button></li> */}

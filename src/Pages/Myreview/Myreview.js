@@ -2,11 +2,12 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Contex/AuthProvider/AuthProvider';
 import ReviewInfo from './ReviewInfo';
 import swal from 'sweetalert';
+import useTitle from '../../Hooks/useTitle';
 
 const Myreview = () => {
+  useTitle('My review')
   const { user } = useContext(AuthContext);
   const [reviews, setReviews] = useState([]);
-  // const { service_name, name, email, review } = useLoaderData();
 
   useEffect(() => {
     fetch(`http://localhost:5001/reviews?email=${user?.email}`)
@@ -15,7 +16,6 @@ const Myreview = () => {
   }, [user?.email])
 
   const handleDelete = (id) => {
-    console.log('clicked', id);
     const proceed = window.confirm('Are you want to delete?')
     if (proceed) {
       fetch(`http://localhost:5001/reviews/${id}`, {
@@ -23,7 +23,6 @@ const Myreview = () => {
       })
         .then(res => res.json())
         .then(data => {
-          console.log(data);
           swal("Succeed!", "You have deleted review!", "success");
           const remaining = reviews.filter(rev => rev._id !== id);
           setReviews(remaining);
@@ -43,7 +42,6 @@ const Myreview = () => {
               <h1 className='text-center text-4xl py-2 my-2 font-semibold'>You have total {reviews.length} reviews</h1>
             </>
         }
-
         <table className="table w-full">
           <thead>
             <tr>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ReviewInfo = ({ r, handleDelete }) => {
-  const { service_name, name, review, _id } = r;
+  const { service_name, review, _id } = r;
 
   return (
     <tr>
