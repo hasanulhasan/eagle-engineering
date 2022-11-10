@@ -6,6 +6,7 @@ const Signup = () => {
 
   const [error, setError] = useState('');
   const { createUser } = useContext(AuthContext);
+  const [isloading, setIslaoding] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,7 +20,8 @@ const Signup = () => {
     createUser(email, password)
       .then(result => {
         const user = result.user;
-        setError('')
+        setError('');
+        setIslaoding(true);
         form.reset();
       })
       .catch(e => {
@@ -32,6 +34,14 @@ const Signup = () => {
     <div className='flex justify-center my-5'>
 
       <div className="flex flex-col max-w-md w-1/2 p-6 rounded-md sm:p-10 dark:bg-gray-900 dark:text-gray-100">
+        {
+          isloading ?
+            <>
+              <div className='flex justify-center'>
+                <div className=" w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-violet-400"></div>
+              </div>
+            </> : <></>
+        }
         <div className="mb-8 text-center">
           <h1 className="my-3 text-4xl font-bold">Sign up</h1>
           <p className="text-sm dark:text-gray-400">Sign up here </p>

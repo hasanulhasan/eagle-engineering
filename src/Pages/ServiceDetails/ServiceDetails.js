@@ -10,8 +10,10 @@ const ServiceDetails = () => {
   const { user } = useContext(AuthContext);
   const { title, price, rating, description, img, _id } = useLoaderData();
   const [reviews, setReviews] = useState([]);
+  const [refresh, setRefresh] = useState(true);
   console.log(reviews);
 
+  //
   const handleReview = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -41,6 +43,7 @@ const ServiceDetails = () => {
       .then(data => {
         console.log(data)
         if (data.acknowledged) {
+          setRefresh(refresh);
           form.reset();
           alert('your review added')
         }
@@ -52,8 +55,11 @@ const ServiceDetails = () => {
   useEffect(() => {
     fetch(`http://localhost:5001/reviews/${_id}`)
       .then(res => res.json())
-      .then(data => setReviews(data))
-  }, [_id])
+      .then(data => {
+        setReviews(data)
+        setRefresh(!refresh);
+      })
+  }, [_id, refresh])
 
 
   return (

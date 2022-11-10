@@ -5,7 +5,8 @@ import AuthProvider, { AuthContext } from '../Contex/AuthProvider/AuthProvider';
 import useTitle from '../Hooks/useTitle';
 
 const Login = () => {
-  useTitle('Login')
+  useTitle('Login');
+  const [isloading, setIslaoding] = useState(false);
   const [error, setError] = useState('');
   const { user, providerLogin, signIn } = useContext(AuthContext);
   const googleProvider = new GoogleAuthProvider();
@@ -38,6 +39,7 @@ const Login = () => {
         const user = result.user;
         setError('');
         form.reset();
+        setIslaoding(true);
         navigate(from, { replace: true });
       })
       .catch(e => {
@@ -49,6 +51,14 @@ const Login = () => {
   return (
     <div className='flex justify-center my-5'>
       <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 dark:bg-gray-900 dark:text-gray-100">
+        {
+          isloading ?
+            <>
+              <div className='flex justify-center'>
+                <div className=" w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-violet-400"></div>
+              </div>
+            </> : <></>
+        }
         <h2 className="mb-3 text-3xl font-semibold text-center">Login to your account</h2>
         <p className="text-sm text-center dark:text-gray-400">Dont have account?
           <Link to='/signup' className="focus:underline hover:underline dark:text-violet-400">Sign up here</Link>
