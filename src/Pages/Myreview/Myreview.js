@@ -1,13 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Contex/AuthProvider/AuthProvider';
 import ReviewInfo from './ReviewInfo';
+import swal from 'sweetalert';
 
 const Myreview = () => {
   const { user } = useContext(AuthContext);
   const [reviews, setReviews] = useState([]);
   // const { service_name, name, email, review } = useLoaderData();
-
-  console.log(reviews[0], reviews[1]);
 
   useEffect(() => {
     fetch(`http://localhost:5001/reviews?email=${user?.email}`)
@@ -15,10 +14,36 @@ const Myreview = () => {
       .then(data => setReviews(data))
   }, [user?.email])
 
+  const handleDelete = (id) => {
+    console.log('clicked', id);
+    const proceed = window.confirm('Are you want to delete?')
+    if (proceed) {
+      fetch(`http://localhost:5001/reviews/${id}`, {
+        method: 'DELETE'
+      })
+        .then(res => res.json())
+        .then(data => {
+          console.log(data);
+          swal("Succeed!", "You have deleted review!", "success");
+          const remaining = reviews.filter(rev => rev._id !== id);
+          setReviews(remaining);
+        })
+    }
+  }
+
   return (
     <div>
       <div className="overflow-x-auto">
-        <h1 className='text-center text-4xl py-2 my-2 font-semibold'>You have total {reviews.length} reviews</h1>
+        {
+          reviews.length === 0 ?
+            <>
+              <h1 className='text-center text-4xl py-2 my-2 font-semibold'>You have no review</h1>
+            </> :
+            <>
+              <h1 className='text-center text-4xl py-2 my-2 font-semibold'>You have total {reviews.length} reviews</h1>
+            </>
+        }
+
         <table className="table w-full">
           <thead>
             <tr>
@@ -30,7 +55,7 @@ const Myreview = () => {
           </thead>
           <tbody>
             {
-              reviews.map(r => <ReviewInfo key={r._id} r={r}></ReviewInfo>)
+              reviews.map(r => <ReviewInfo key={r._id} r={r} handleDelete={handleDelete}></ReviewInfo>)
             }
           </tbody>
         </table>
