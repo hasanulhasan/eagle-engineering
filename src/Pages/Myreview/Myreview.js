@@ -6,11 +6,11 @@ import useTitle from '../../Hooks/useTitle';
 
 const Myreview = () => {
   useTitle('My review')
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
   const [reviews, setReviews] = useState([]);
-
+  console.log(reviews);
   useEffect(() => {
-    fetch(`http://localhost:5001/reviews?email=${user?.email}`)
+    fetch(`https://assignment-11-server-gold-eight.vercel.app/reviews?email=${user?.email}`)
       .then(res => res.json())
       .then(data => setReviews(data))
   }, [user?.email])
@@ -18,7 +18,7 @@ const Myreview = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm('Are you want to delete?')
     if (proceed) {
-      fetch(`http://localhost:5001/reviews/${id}`, {
+      fetch(`https://assignment-11-server-gold-eight.vercel.app/reviews/${id}`, {
         method: 'DELETE'
       })
         .then(res => res.json())
@@ -53,7 +53,7 @@ const Myreview = () => {
           </thead>
           <tbody>
             {
-              reviews.map(r => <ReviewInfo key={r._id} r={r} handleDelete={handleDelete}></ReviewInfo>)
+              reviews?.map(r => <ReviewInfo key={r._id} r={r} handleDelete={handleDelete}></ReviewInfo>)
             }
           </tbody>
         </table>

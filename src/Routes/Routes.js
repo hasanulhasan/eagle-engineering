@@ -29,16 +29,16 @@ const router = createBrowserRouter([
       },
       {
         path: '/myreview',
-        element: <Myreview></Myreview>
+        element: <PrivateRouter><Myreview></Myreview></PrivateRouter>
       },
       {
         path: '/addservices',
-        element: <AddServices></AddServices>
+        element: <PrivateRouter><AddServices></AddServices></PrivateRouter>
       },
       {
         path: '/services/:id',
         element: <ServiceDetails></ServiceDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5001/services/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment-11-server-gold-eight.vercel.app/services/${params.id}`)
       },
       {
         path: '/signup',

@@ -23,7 +23,7 @@ const AddServices = () => {
       description
     }
 
-    fetch('http://localhost:5001/services', {
+    fetch('https://assignment-11-server-gold-eight.vercel.app/services', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

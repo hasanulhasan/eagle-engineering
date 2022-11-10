@@ -32,7 +32,7 @@ const ServiceDetails = () => {
       review
     }
     //for review posting
-    fetch('http://localhost:5001/reviews', {
+    fetch('https://assignment-11-server-gold-eight.vercel.app/reviews', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -53,7 +53,7 @@ const ServiceDetails = () => {
 
   //for review showing
   useEffect(() => {
-    fetch(`http://localhost:5001/reviews/${_id}`)
+    fetch(`https://assignment-11-server-gold-eight.vercel.app/reviews/${_id}`)
       .then(res => res.json())
       .then(data => {
         setReviews(data)

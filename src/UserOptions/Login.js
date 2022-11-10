@@ -15,8 +15,8 @@ const Login = () => {
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
+
   const googleButton = () => {
-    console.log('clicked on google');
     providerLogin(googleProvider)
       .then(result => {
         const user = result.user;
@@ -29,6 +29,7 @@ const Login = () => {
   }
 
   const handleLogInSubmit = (e) => {
+    setIslaoding(true);
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
@@ -37,9 +38,27 @@ const Login = () => {
     signIn(email, password)
       .then(result => {
         const user = result.user;
+        //jwt token
+        const currentUser = {
+          email: user?.email
+        }
+        console.log(currentUser)
+        fetch('https://assignment-11-server-gold-eight.vercel.app/jwt', {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify(currentUser)
+        })
+          .then(res => res.json())
+          .then(data => {
+            console.log(data);
+
+            setIslaoding(false);
+          })
+
         setError('');
         form.reset();
-        setIslaoding(true);
         navigate(from, { replace: true });
       })
       .catch(e => {
