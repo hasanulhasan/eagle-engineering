@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Banner = () => {
   return (
-    <div className="hero min-h-16 bg-base-200 my-4 rounded-lg">
+    <div className="hero min-h-16 bg-base-200 my-10 rounded-lg">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <img src="https://challenges.robotevents.com/uploads/0000795_original.jpg" alt='..' className="max-w-sm rounded-lg shadow-2xl" />
         <div className='w-3/5'>

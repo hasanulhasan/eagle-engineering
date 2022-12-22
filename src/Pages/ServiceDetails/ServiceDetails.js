@@ -11,9 +11,6 @@ const ServiceDetails = () => {
   const { title, price, rating, description, img, _id } = useLoaderData();
   const [reviews, setReviews] = useState([]);
   const [refresh, setRefresh] = useState(true);
-  console.log(reviews);
-
-  //
   const handleReview = (e) => {
     e.preventDefault();
     const form = e.target;

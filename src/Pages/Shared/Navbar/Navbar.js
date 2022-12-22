@@ -6,7 +6,6 @@ const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
 
   const handleLogout = () => {
-    console.log('logout clicked');
     logOut()
       .then(() => { })
       .catch(err => console.error(err))
@@ -14,11 +13,11 @@ const Navbar = () => {
 
   return (
     <div className="navbar bg-base-100">
-      <div className="flex-1">
+      <div className="flex-1 font-bold">
         <Link className="btn btn-ghost normal-case text-xl" to='/'><img className='mr-2' width="35" height="32" viewBox="0 0 24 24" alt='..' src='https://cdn-icons-png.flaticon.com/512/5463/5463436.png'></img> Eagle Engineering</Link>
       </div>
       <div className="flex-none">
-        <ul className="menu menu-horizontal p-0">
+        <ul className="menu menu-horizontal p-0 font-bold">
           {/* <li> <Link to='/'>{user?.displayName}</Link></li>
           <li> <Link to='/'>{user?.email}</Link></li>
           <li><Link to='/'><div className="avatar">
@@ -26,8 +25,6 @@ const Navbar = () => {
               <img src={user?.photoURL} alt='..' />
             </div>
           </div></Link></li> */}
-
-
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/blogs'>Blogs</Link></li>
           <li><Link to='/services'>Services</Link></li>
@@ -39,7 +36,6 @@ const Navbar = () => {
               </> :
               <></>
           }
-
           {
             user?.uid ?
               <>
@@ -50,7 +46,6 @@ const Navbar = () => {
                 <li><Link to='/login'><button className="btn btn-outline btn-warning">Login</button></Link></li>
               </>
           }
-
         </ul>
       </div>
     </div>

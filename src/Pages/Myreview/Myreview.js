@@ -8,7 +8,6 @@ const Myreview = () => {
   useTitle('My review')
   const { user } = useContext(AuthContext);
   const [reviews, setReviews] = useState([]);
-  console.log(reviews);
   useEffect(() => {
     fetch(`https://assignment-11-server-gold-eight.vercel.app/reviews?email=${user?.email}`)
       .then(res => res.json())
