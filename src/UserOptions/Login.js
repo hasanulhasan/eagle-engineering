@@ -19,8 +19,8 @@ const Login = () => {
   const googleButton = () => {
     providerLogin(googleProvider)
       .then(result => {
-        const user = result.user;
-        console.log(user);
+        // const user = result.user;
+        // console.log(user);
         navigate(from, { replace: true });
       })
       .catch(err => {

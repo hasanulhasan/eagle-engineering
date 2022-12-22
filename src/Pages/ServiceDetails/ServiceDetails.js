@@ -11,13 +11,13 @@ const ServiceDetails = () => {
   const { title, price, rating, description, img, _id } = useLoaderData();
   const [reviews, setReviews] = useState([]);
   const [refresh, setRefresh] = useState(true);
+
   const handleReview = (e) => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
     const email = form.email.value;
     const review = form.review.value;
-
     const reviewInfo = {
       serviceId: _id,
       service_name: title,
@@ -38,11 +38,11 @@ const ServiceDetails = () => {
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data)
+        // console.log(data)
         if (data.acknowledged) {
           setRefresh(refresh);
           form.reset();
-          alert('your review added')
+          // alert('your review added')
         }
       })
       .catch(err => console.error(err))

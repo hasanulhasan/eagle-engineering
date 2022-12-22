@@ -39,11 +39,10 @@ const AddServices = () => {
         }
       })
       .catch(err => console.error(err))
-
   }
 
   return (
-    <div className='flex justify-center'>
+    <div className='flex justify-center my-10'>
       <div className='w-1/2'>
         <form className="card-body outline-double outline-3 outline-offset-2 rounded-lg my-4 " onSubmit={handleSubmit}>
           <h1 className='text-center text-3xl py-2 font-semibold'>Add Services</h1>
