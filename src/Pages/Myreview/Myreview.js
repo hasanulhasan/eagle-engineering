@@ -15,7 +15,7 @@ const Myreview = () => {
   }, [user?.email])
 
   const handleDelete = (id) => {
-    const proceed = window.confirm('Are you want to delete?')
+    const proceed = window.confirm('Are you want to delete forever?')
     if (proceed) {
       fetch(`https://assignment-11-server-gold-eight.vercel.app/reviews/${id}`, {
         method: 'DELETE'
